@@ -57,8 +57,12 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="PublishLocations" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Alunos.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocations\SQLDatabase.publish.xml" />
   </ItemGroup>
 </Project>
