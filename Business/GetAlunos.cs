@@ -8,15 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Controller
+namespace Business
 {
     public class GetAlunos
     {
         public List<Alunos> GetAlunosList()
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TopicosII")))
+            using (IDbConnection connection = output))
             {
-                var output = connection.Query<Alunos>($"select * from Alunos").ToList();
+                var output = connection.Query<Alunos>("select * from Alunos").ToList();
                 return output;
             }
         }
