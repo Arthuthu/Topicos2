@@ -16,7 +16,8 @@ namespace Business.Controller
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TopicosII")))
             {
-                return connection.Query<Alunos>($"select * from Alunos").ToList();
+                var output = connection.Query<Alunos>($"select * from Alunos").ToList();
+                return output;
             }
         }
     }
