@@ -1,4 +1,4 @@
-﻿using Business;
+﻿using Business.Business;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,7 @@ namespace TopicosII.Controllers
     {
         public ActionResult Index()
         {
-            var getAlunos = new GetAlunos();
-
-            ViewBag.Message = getAlunos.GetAlunosList();
+            ViewBag.Alunos = new GetAlunos().Listar();
 
             return View();
         }

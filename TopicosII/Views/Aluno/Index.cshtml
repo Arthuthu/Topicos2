@@ -1,11 +1,17 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Alunos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h2>Alunos</h2>
 
+@{
+    var alunos = ViewBag.Alunos;
+}
 
-<h2>Viewbag.Message</h2>
-
+@foreach (var aluno in alunos)
+{
+    <h5>@aluno.FullName</h5>
+}
 
