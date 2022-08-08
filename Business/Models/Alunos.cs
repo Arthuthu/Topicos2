@@ -14,6 +14,7 @@ namespace Business.Models
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
 
+        //Retorna FirstName e LastName
         public string FullName
         {
             get
