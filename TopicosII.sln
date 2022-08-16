@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Busine
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLDatabase", "SQLDatabase\SQLDatabase.sqlproj", "{D359B5CE-2AA7-4107-9B00-910A0B924F71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emptyx", "Emptyx\Emptyx.csproj", "{04B4604A-18E5-4100-B491-97B045B966A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Empty", "Empty", "{79E45BA4-B967-47AE-9325-679E7AC66BAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FirstSite", "FirstSite", "{14CFB619-CC83-43D0-8090-9A7B700FF3F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,9 +35,19 @@ Global
 		{D359B5CE-2AA7-4107-9B00-910A0B924F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D359B5CE-2AA7-4107-9B00-910A0B924F71}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D359B5CE-2AA7-4107-9B00-910A0B924F71}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{04B4604A-18E5-4100-B491-97B045B966A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B4604A-18E5-4100-B491-97B045B966A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B4604A-18E5-4100-B491-97B045B966A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B4604A-18E5-4100-B491-97B045B966A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F71D9506-BD30-4172-A508-D5D7A9AD9047} = {14CFB619-CC83-43D0-8090-9A7B700FF3F3}
+		{6956A987-1A10-4572-9F6B-06F34D1D9875} = {14CFB619-CC83-43D0-8090-9A7B700FF3F3}
+		{D359B5CE-2AA7-4107-9B00-910A0B924F71} = {14CFB619-CC83-43D0-8090-9A7B700FF3F3}
+		{04B4604A-18E5-4100-B491-97B045B966A2} = {79E45BA4-B967-47AE-9325-679E7AC66BAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A1E1B4C-3023-47E4-A88D-B40EADD9A7B4}

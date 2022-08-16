@@ -15,7 +15,7 @@ namespace Business.Business
         //Metódo de conexão do banco (connectionString disponivel em properties da database TopicosII)
         public Connection()
         {
-            banco = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TopicosII;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            banco = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TopicosII;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
     }
 }
