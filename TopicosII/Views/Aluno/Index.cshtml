@@ -10,8 +10,15 @@
     var alunos = ViewBag.Alunos;
 }
 
-@foreach (var aluno in alunos)
-{
-    <h5>@aluno.FullName</h5>
-}
+<div class="container">
+    <div class="row">
+        <ul class="list-group">
+            @foreach (var aluno in alunos)
+            {
+               <li class="list-group-item">@aluno.FullName</li>
+            }
+        </ul>
+    </div>
+</div>
+
 
