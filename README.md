@@ -2,7 +2,7 @@
 
 #PT-BR
 1 - Para que você consiga utilizar o SQL Server integrado no visual studio é necesseario realizar alguns ajustes.
-2 - Entre no projeto SQLDatabase.
+2 - Clique no com o botão direito no projeto do SQL Server e depois selecione Publish.
 3 - Clique no botão Edit.
 4 - Clique em browse.
 5 - Clique em Local.
@@ -21,7 +21,7 @@ chamado Connection string, com ele você se conectará com esta database integra
 
 #EN-US
 1 - In order to use SQL Server in visual studio, you need to make some adjustments.
-2 - Go to SQLDatabase project.
+2 - Right click the SQL Server project and select the Publish option.
 3 - Select the Edit button.
 4 - Select browse.
 5 - Select MSSQLocalDB and select OK.
