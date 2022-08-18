@@ -15,5 +15,12 @@ namespace PizzariaLibrary.Models
         public int Quantidade { get; set; }
         public decimal Valor { get; set; }
         public bool Ativo { get; set; }
+        public string InformacaoCompleta
+        {
+            get
+            {
+                return $"Pizza: {Nome} Descrição: {Descricao} Valor: {Valor}";
+            }
+        }
     }
 }
