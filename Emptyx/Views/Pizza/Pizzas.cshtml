@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Pizza";
+}
+
+<h2>Pizza</h2>
+
+@{
+    var pizzas = ViewBag.Pizzas;
+}
+
+<div class="container">
+    <div class="row">
+        <ul class="list-group">
+            @foreach (var pizza in pizzas)
+            {
+                <li class="list-group-item">@pizza.Nome</li>
+            }
+        </ul>
+    </div>
+</div>
