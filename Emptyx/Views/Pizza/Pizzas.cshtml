@@ -1,6 +1,7 @@
 ﻿
 @{
-    ViewBag.Title = "Pizza";
+    ViewBag.Title = "Pizzas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Pizza</h2>
@@ -9,13 +10,44 @@
     var pizzas = ViewBag.Pizzas;
 }
 
-<div class="container">
-    <div class="row">
-        <ul class="list-group">
-            @foreach (var pizza in pizzas)
-            {
-                <li class="list-group-item">@pizza.Nome <br/><br/> Ingredientes: @pizza.Descricao <br/><br/> Valor: @pizza.Valor</li>
-            }
-        </ul>
+<!-- Lista de pizzas utilizando rows-->
+@foreach (var pizza in pizzas)
+{
+    <div class="row border border-2 ">
+        <div class="col-md-4">
+            @pizza.Nome
+        </div>
+        <div class="col-md-4">
+            @pizza.Descricao
+        </div>
+        <div class="col-md-4">
+            @pizza.Valor
+        </div>
+    </div>
+}
+<br />
+
+<!-- Lista de pizzas utilizando tables-->
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Ingredientes</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pizza in pizzas)
+                {
+                    <tr>
+                        <td>@pizza.Nome</td>
+                        <td>@pizza.Descricao</td>
+                        <td>R$@pizza.Valor</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 </div>
