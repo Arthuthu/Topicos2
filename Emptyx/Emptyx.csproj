@@ -91,6 +91,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\Layout.css" />
     <Content Include="Content\JavaScript.js" />
+    <Content Include="Content\Pizzas.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
