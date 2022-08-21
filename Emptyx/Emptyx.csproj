@@ -89,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\imagens\3Queijos.jpg" />
+    <Content Include="Content\imagens\Calabresa.jpg" />
+    <Content Include="Content\imagens\Fran com requeijão.jpg" />
     <Content Include="Content\Layout.css" />
     <Content Include="Content\JavaScript.js" />
     <Content Include="Content\Pizzas.css" />

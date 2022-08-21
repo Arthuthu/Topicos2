@@ -68,6 +68,7 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Tipos.sql" />
     <Build Include="dbo\Tables\Pizzas.sql" />
+    <Build Include="dbo\Tables\Esfihas.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Pizzaria.refactorlog" />
