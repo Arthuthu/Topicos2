@@ -89,9 +89,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\imagens\3Queijos.jpg" />
-    <Content Include="Content\imagens\Calabresa.jpg" />
-    <Content Include="Content\imagens\Fran com requeijão.jpg" />
+    <Content Include="Content\imagens\Esfihas\Carne.png" />
+    <Content Include="Content\imagens\Esfihas\Folhada a doce de leite.png" />
+    <Content Include="Content\imagens\Esfihas\Italianinha.png" />
+    <Content Include="Content\imagens\Pizzas\3Queijos.jpg" />
+    <Content Include="Content\imagens\Pizzas\brigadeiro.jpg" />
+    <Content Include="Content\imagens\Pizzas\Calabresa.jpg" />
+    <Content Include="Content\imagens\Pizzas\Catuperoni.jpg" />
+    <Content Include="Content\imagens\Pizzas\Fran com requeijão.jpg" />
+    <Content Include="Content\imagens\Pizzas\Napolitana.jpg" />
+    <Content Include="Content\imagens\Pizzas\Pepperoni.jpg" />
+    <Content Include="Content\imagens\Pizzas\Presunto.jpg" />
     <Content Include="Content\Layout.css" />
     <Content Include="Content\JavaScript.js" />
     <Content Include="Content\Pizzas.css" />
