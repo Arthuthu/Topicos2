@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="GetEsfihas.cs" />
     <Compile Include="GetPizzas.cs" />
+    <Compile Include="Models\Esfihas.cs" />
     <Compile Include="Models\Pizzas.cs" />
     <Compile Include="Models\Tipos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

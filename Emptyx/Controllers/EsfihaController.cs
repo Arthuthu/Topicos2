@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzariaLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,7 @@ namespace Emptyx.Controllers
         // GET: Esfiha
         public ActionResult Esfihas()
         {
+            ViewBag.Esfihas = new GetEsfihas().Listar();
             return View();
         }
     }

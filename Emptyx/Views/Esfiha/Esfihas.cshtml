@@ -1,10 +1,55 @@
-﻿
+﻿<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/Esifhas.css" rel="stylesheet" />
+
 @{
     ViewBag.Title = "Esfihas";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="row justify-content-center fw-bold">
-    <h2>Esfihas</h2>
+
+@{ 
+    var esfihas = ViewBag.Esfihas;
+}
+
+<br />
+<div class="row justify-content-center text-center">
+    <div class="col-md-3 fw-bold">
+        <h4>
+            <img src="~/Content/imagens/Esfihas/Carne.png" />
+            Carne
+        </h4>
+    </div>
+    <div class="col-md-3 fw-bold">
+        <h4>
+            <img src="~/Content/imagens/Esfihas/Folhada a doce de leite.png" />
+            Folhada a doce de leite.
+        </h4>
+    </div>
+    <div class="col-md-3 fw-bold">
+        <h4>
+            <img src="~/Content/imagens/Esfihas/Italianinha.png" />
+            Italianinha
+        </h4>
+    </div>
 </div>
 
 
+<br />
+<div class="row">
+    <div>
+        <ul class="list-group list-group-horizontal fw-bold border border-dark">
+            <li class="list-group-item col-md-3">Nome</li>
+            <li class="list-group-item col-md-7">Ingredientes</li>
+            <li class="list-group-item col-md-2">Valor</li>
+        </ul>
+    </div>
+    <div class="col-md-12">
+        @foreach (var esfiha in esfihas)
+        {
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item col-md-3">@esfiha.Nome</li>
+                <li class="list-group-item col-md-7">@esfiha.Descricao</li>
+                <li class="list-group-item col-md-2">R$@esfiha.Valor</li>
+            </ul>
+        }
+    </div>
+</div>

@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\Esifhas.css" />
     <Content Include="Content\imagens\Esfihas\Carne.png" />
     <Content Include="Content\imagens\Esfihas\Folhada a doce de leite.png" />
     <Content Include="Content\imagens\Esfihas\Italianinha.png" />

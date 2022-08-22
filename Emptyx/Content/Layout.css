@@ -12,14 +12,16 @@ nav {
     background-color: #23232e;
 }
 
-.logo{
+.logoText a {
     color: rgb(226, 226,226);
     text-transform: uppercase;
     letter-spacing: 5px;
+    font-size: 35px;
+    text-decoration: none;
 }
 
-.logoText {
-    font-size: 35px;
+.logoText a:hover {
+    color: #20b0b0
 }
 
 .nav-links {
