@@ -1,0 +1,31 @@
+﻿<link href="~/Content/Pizzas.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "PizzaDetalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PizzaDetalhes</h2>
+
+@{
+    var pizza = ViewBag.Pizza;
+}
+
+
+<div class="row">
+    <div>
+        <ul class="list-group list-group-horizontal fw-bold border border-dark">
+            <li class="list-group-item col-md-3">Nome</li>
+            <li class="list-group-item col-md-7">Ingredientes</li>
+            <li class="list-group-item col-md-2">Valor</li>
+        </ul>
+    </div>
+    <div class="col-md-12">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item col-md-3">@pizza.Nome</li>
+            <li class="list-group-item col-md-7">@pizza.Descricao</li>
+            <li class="list-group-item col-md-2">R$@pizza.Valor</li>
+        </ul>
+    </div>
+</div>

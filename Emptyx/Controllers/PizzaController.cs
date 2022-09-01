@@ -15,5 +15,12 @@ namespace Emptyx.Controllers
             ViewBag.Pizzas = new GetPizzas().Listar();
             return View();
         }
+
+        public ViewResult PizzaDetalhes(int id)
+        {
+            var data = new GetPizzas().Buscar(id);
+            ViewBag.Pizza = data;
+            return View(data);
+        }
     }
 }

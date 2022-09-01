@@ -146,6 +146,7 @@
     <Content Include="Scripts\jquery-3.6.0.min.map" />
     <Content Include="Views\Pizza\Pizzas.cshtml" />
     <Content Include="Views\Esfiha\Esfihas.cshtml" />
+    <Content Include="Views\Pizza\PizzaDetalhes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
