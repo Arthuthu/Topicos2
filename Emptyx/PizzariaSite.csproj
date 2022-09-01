@@ -147,6 +147,7 @@
     <Content Include="Views\Pizza\Pizzas.cshtml" />
     <Content Include="Views\Esfiha\Esfihas.cshtml" />
     <Content Include="Views\Pizza\PizzaDetalhes.cshtml" />
+    <Content Include="Views\Esfiha\EsfihaDetalhes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

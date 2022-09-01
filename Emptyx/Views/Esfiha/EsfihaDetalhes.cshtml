@@ -1,0 +1,30 @@
+﻿<link href="~/Content/Esifhas.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "EsfihaDetalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EsfihaDetalhes</h2>
+
+@{
+    var esfiha = ViewBag.Esfiha;
+}
+
+<div class="row">
+    <div>
+        <ul class="list-group list-group-horizontal fw-bold border border-dark">
+            <li class="list-group-item col-md-3">Nome</li>
+            <li class="list-group-item col-md-7">Ingredientes</li>
+            <li class="list-group-item col-md-2">Valor</li>
+        </ul>
+    </div>
+    <div class="col-md-12">
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item col-md-3">@esfiha.Nome</li>
+            <li class="list-group-item col-md-7">@esfiha.Descricao</li>
+            <li class="list-group-item col-md-2">R$@esfiha.Valor</li>
+        </ul>
+    </div>
+</div>

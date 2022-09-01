@@ -15,5 +15,12 @@ namespace Emptyx.Controllers
             ViewBag.Esfihas = new GetEsfihas().Listar();
             return View();
         }
+
+        public ViewResult EsfihaDetalhes(int id)
+        {
+            var data = new GetEsfihas().Buscar(id);
+            ViewBag.Esfiha = data;
+            return View(data);
+        }
     }
 }
