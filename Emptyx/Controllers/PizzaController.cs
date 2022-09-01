@@ -22,5 +22,11 @@ namespace Emptyx.Controllers
             ViewBag.Pizza = data;
             return View(data);
         }
+
+        public ActionResult CriarPizza()
+        {
+
+            return View();
+        }
     }
 }

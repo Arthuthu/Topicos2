@@ -104,6 +104,7 @@
     <Content Include="Content\Layout.css" />
     <Content Include="Content\JavaScript.js" />
     <Content Include="Content\Pizzas.css" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -148,6 +149,7 @@
     <Content Include="Views\Esfiha\Esfihas.cshtml" />
     <Content Include="Views\Pizza\PizzaDetalhes.cshtml" />
     <Content Include="Views\Esfiha\EsfihaDetalhes.cshtml" />
+    <Content Include="Views\Pizza\CriarPizza.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
