@@ -30,7 +30,7 @@ namespace Emptyx.Controllers
         {
             var pizzaCriada = new GetPizzas().Criar(pizza);
 
-            return View(pizzaCriada);
+            return View();
         }
     }
 }
