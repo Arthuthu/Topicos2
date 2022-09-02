@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Dapper;
 using static Dapper.SqlMapper;
 using PizzariaLibrary.Models;
+using System.Data.SqlClient;
 
 namespace Emptyx.Controllers
 {
@@ -26,11 +27,13 @@ namespace Emptyx.Controllers
             return View(data);
         }
 
+        [HttpPost]
         public ActionResult CriarPizza(Pizzas pizza)
         {
-            var pizzaCriada = new GetPizzas().Criar(pizza);
+            var banco = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PizzariaData;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            banco.Execute("insert into Pizzas values (@IdTipo, @Nome, @Descricao, @Quantidade, @Valor, @Ativo)", pizza);
 
-            return View();
+            return View(pizza);
         }
     }
 }
