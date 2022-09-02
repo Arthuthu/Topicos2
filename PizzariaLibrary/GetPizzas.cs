@@ -19,6 +19,7 @@ namespace PizzariaLibrary
                 new { id }).SingleOrDefault();
         }
 
+        //O objeto que é parametro (pizza), receberá informações da Controller e com essas informações sera feito um Insert no banco
         public Pizzas Criar(Pizzas pizza)         
         {
             banco.Execute("insert into Pizzas values (@IdTipo, @Nome, @Descricao, @Quantidade, @Valor, @Ativo)", pizza);

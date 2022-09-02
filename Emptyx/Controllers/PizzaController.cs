@@ -27,13 +27,26 @@ namespace Emptyx.Controllers
             return View(data);
         }
 
+        //Action para chamar a View do CriarPizza.
+        public ActionResult CriarPizza()
+        {
+            return View();
+        }
+
+        //Action que vai ser chamada quanto o botão Create for clicado.
         [HttpPost]
         public ActionResult CriarPizza(Pizzas pizza)
         {
-            var banco = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PizzariaData;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            banco.Execute("insert into Pizzas values (@IdTipo, @Nome, @Descricao, @Quantidade, @Valor, @Ativo)", pizza);
+            //Se todos os campos estiverem certo, a data sera passada em diante.
+            if (ModelState.IsValid)
+            {
+                //Chama o método Criar na Classe GetPizzas e passa o objeto preenchido com a data da form da view.
+                var data = new GetPizzas().Criar(pizza);
 
-            return View(pizza);
+                return RedirectToAction("Pizzas");
+            }
+
+            return View();
         }
     }
 }
