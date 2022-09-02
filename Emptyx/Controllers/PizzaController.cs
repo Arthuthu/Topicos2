@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Dapper;
+using static Dapper.SqlMapper;
+using PizzariaLibrary.Models;
 
 namespace Emptyx.Controllers
 {
@@ -23,10 +26,11 @@ namespace Emptyx.Controllers
             return View(data);
         }
 
-        public ActionResult CriarPizza()
+        public ActionResult CriarPizza(Pizzas pizza)
         {
+            var pizzaCriada = new GetPizzas().Criar(pizza);
 
-            return View();
+            return View(pizzaCriada);
         }
     }
 }

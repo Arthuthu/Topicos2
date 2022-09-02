@@ -19,10 +19,10 @@ namespace PizzariaLibrary
                 new { id }).SingleOrDefault();
         }
 
-        public Pizzas Criar(int idTipo, string nome, string descricao, int quantidade, decimal valor, bool ativo)
+        public Pizzas Criar(Pizzas pizza)         
         {
-            return banco.Query<Pizzas>($"insert into Pizzas where {idTipo} = @IdTipo, {nome} = @Nome" +
-                $", {descricao} = @Descricao, {quantidade} = @Quantidade, {valor} = @Valor, {ativo} = @Ativo ").SingleOrDefault();
+            banco.Execute("insert into Pizzas values (@IdTipo, @Nome, @Descricao, @Quantidade, @Valor, @Ativo)", pizza);
+            return pizza;
         }
     }
 }
