@@ -14,15 +14,34 @@ namespace Emptyx.Controllers
     public class PizzaController : Controller
     {
         // GET: Pizza
-        public ActionResult Pizzas()
+        public ActionResult Pizzas(int ordem = 0)
         {
-            ViewBag.Pizzas = new GetPizzas().Listar();
+            var lista = new PizzaDAO().Listar();
+
+            switch (ordem)
+            {
+                //Ordem alfabética
+                case 0:
+                    lista = lista.OrderBy(o => o.Nome).ToList();
+                    break;
+                //Ordem por Tipo
+                case 1:
+                    lista = lista.OrderBy(o => o.TipoNome).ToList();
+                    break;
+                //Ordem por Valor
+                case 2:
+                    lista = lista.OrderBy(o => o.Valor).ToList();
+                    break;
+            }
+
+            ViewBag.Pizzas = lista;
+
             return View();
         }
 
         public ViewResult PizzaDetalhes(int id)
         {
-            var data = new GetPizzas().Buscar(id);
+            var data = new PizzaDAO().Buscar(id);
             ViewBag.Pizza = data;
             return View(data);
         }
@@ -41,12 +60,35 @@ namespace Emptyx.Controllers
             if (ModelState.IsValid)
             {
                 //Chama o método Criar na Classe GetPizzas e passa o objeto preenchido com a data da form da view.
-                var data = new GetPizzas().Criar(pizza);
+                var data = new PizzaDAO().Criar(pizza);
 
                 return RedirectToAction("Pizzas");
             }
 
             return View();
+        }
+
+        public ActionResult AtualizarPizza()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AtualizarPizza(Pizzas pizza)
+        {
+            if (ModelState.IsValid)
+            {
+                new PizzaDAO().Atualizar(pizza);
+
+                return RedirectToAction("Pizzas");
+            }
+            return View();
+        }
+
+        public ActionResult DeletarPizza(int id)
+        {
+            new PizzaDAO().Deletar(id);
+            return RedirectToAction("Pizzas");
         }
     }
 }

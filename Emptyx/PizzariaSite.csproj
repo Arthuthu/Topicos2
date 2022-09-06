@@ -148,11 +148,13 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
-    <Content Include="Views\Pizza\Pizzas.cshtml" />
     <Content Include="Views\Esfiha\Esfihas.cshtml" />
     <Content Include="Views\Pizza\PizzaDetalhes.cshtml" />
     <Content Include="Views\Esfiha\EsfihaDetalhes.cshtml" />
     <Content Include="Views\Pizza\CriarPizza.cshtml" />
+    <Content Include="Views\Pizza\Pizzas.cshtml" />
+    <Content Include="Views\Pizza\DeletarPizza.cshtml" />
+    <Content Include="Views\Pizza\AtualizarPizza.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

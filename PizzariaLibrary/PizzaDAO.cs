@@ -5,14 +5,16 @@ using System.Linq;
 
 namespace PizzariaLibrary
 {
-    public class GetPizzas : Conexao
+    public class PizzaDAO : Conexao
     {
+        //Busca todas as Pizzas
         public List<Pizzas> Listar()
         {
-            List<Pizzas> pizzas = banco.Query<Pizzas>("select * from Pizzas").ToList();
+            List<Pizzas> pizzas = banco.Query<Pizzas>("select * from Pizzas order by Nome").ToList();
             return pizzas;
         }
 
+        //Busca uma Pizza em especifico por ID
         public Pizzas Buscar(int id)
         {
             return banco.Query<Pizzas>("select * from Pizzas where id=@id",
@@ -26,9 +28,18 @@ namespace PizzariaLibrary
             return pizza;
         }
 
-        public int Deletar(int id)
+        //Deleta uma Pizza em especifico pelo ID
+        public bool Deletar(int id)
         {
-            return banco.Execute($"delete * from Pizzas where {id}=@id");
+            return banco.Execute("delete from Pizzas where id=@pID",
+            new { pID = id }) == 1;
+        }
+
+        //Atualiza as informações da Pizza
+        public Pizzas Atualizar(Pizzas pizza)
+        {
+            banco.Execute("update Pizzas set (@IdTipo, @Nome, @Descricao, @Quantidade, @Valor, @Ativo)", pizza);
+            return Buscar(pizza.Id);
         }
     }
 }

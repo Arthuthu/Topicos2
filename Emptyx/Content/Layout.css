@@ -87,3 +87,13 @@ nav {
 .nav-active{
     transform: translateX(0%);
 }
+
+.listaButton {
+    text-decoration: none;
+    color: black;
+}
+
+    .listaButton:hover {
+        text-decoration: none;
+        color: #20b0b0;
+    }

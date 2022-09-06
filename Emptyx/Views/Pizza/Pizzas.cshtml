@@ -10,6 +10,19 @@
 @{
     var pizzas = ViewBag.Pizzas;
 }
+
+
+
+<div class="row justify-content-center text-center">
+    <div>
+        <ul class="list-group list-group-horizontal fw-bold border border-dark">
+            <li class="list-group-item col-md-4">@Html.ActionLink("Nome", "Pizzas", new { ordem = 0 })</li>
+            <li class="list-group-item col-md-4">@Html.ActionLink("Tipo", "Pizzas", new { ordem = 1 })</li>
+            <li class="list-group-item col-md-4">@Html.ActionLink("Valor", "Pizzas", new { ordem = 2 })</li>
+        </ul>
+    </div>
+</div>
+
 <br />
 <div class="row justify-content-center text-center">
     <div class="col-md-3 fw-bold">
@@ -69,8 +82,9 @@
     <div>
         <ul class="list-group list-group-horizontal fw-bold border border-dark">
             <li class="list-group-item col-md-3">Nome</li>
-            <li class="list-group-item col-md-5">Ingredientes</li>
+            <li class="list-group-item col-md-4">Ingredientes</li>
             <li class="list-group-item col-md-2">Valor</li>
+            <li class="list-group-item col-md-3 text-center">Funcionalidades</li>
         </ul>
     </div>
     <div class="col-md-12">
@@ -78,10 +92,15 @@
         {
             <ul class="list-group list-group-horizontal">
                 <li class="list-group-item col-md-3">@p.Nome</li>
-                <li class="list-group-item col-md-5">@p.Descricao</li>
+                <li class="list-group-item col-md-4">@p.Descricao</li>
                 <li class="list-group-item col-md-2">R$@p.Valor</li>
-                <li class="list-group-item col-md-2"><a href="/Pizza/PizzaDetalhes/@p.Id">Detalhes</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/PizzaDetalhes/@p.Id">Detalhes</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/DeletarPizza/@p.Id">Deletar</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/AtualizarPizza/@p.Id">Atualizar</a></li>
             </ul>
         }
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/CriarPizza">Criar</a></li>
+        </ul>
     </div>
 </div>

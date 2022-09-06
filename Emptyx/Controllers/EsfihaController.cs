@@ -12,13 +12,13 @@ namespace Emptyx.Controllers
         // GET: Esfiha
         public ActionResult Esfihas()
         {
-            ViewBag.Esfihas = new GetEsfihas().Listar();
+            ViewBag.Esfihas = new EsfihaDAO().Listar();
             return View();
         }
 
         public ViewResult EsfihaDetalhes(int id)
         {
-            var data = new GetEsfihas().Buscar(id);
+            var data = new EsfihaDAO().Buscar(id);
             ViewBag.Esfiha = data;
             return View(data);
         }
