@@ -24,7 +24,7 @@ namespace PizzariaLibrary
 
         public Esfihas Criar(Esfihas esfihas)
         {
-            banco.Execute("insert into Esfihas values (@IdTipo, @Nome, @Descricao, @Quantidade, @Valor, @Ativo)", esfihas);
+            banco.Execute("insert into Esfihas values (@IdTipo, @Nome, @Descricao, @Valor, @Ativo)", esfihas);
             return esfihas;
         }
 
@@ -37,14 +37,13 @@ namespace PizzariaLibrary
         public void Atualizar(Esfihas esfiha)
         {
             banco.Execute($"update Esfihas set IdTipo = @IdTipo, Nome = @Nome," +
-                $" Descricao = @Descricao, Quantidade = @Quantidade, Valor = @Valor, " +
+                $" Descricao = @Descricao, Valor = @Valor, " +
                 $" Ativo = @Ativo where Id = @Id ", new
                 {
                     id = esfiha.Id,
                     IdTipo = esfiha.IdTipo,
                     Nome = esfiha.Nome,
                     Descricao = esfiha.Descricao,
-                    Quantidade = esfiha.Quantidade,
                     Valor = esfiha.Valor,
                     Ativo = esfiha.Ativo
                 });

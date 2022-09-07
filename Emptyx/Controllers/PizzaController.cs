@@ -79,7 +79,6 @@ namespace Emptyx.Controllers
                 pizza.IdTipo = obj.IdTipo;
                 pizza.Nome = obj.Nome;
                 pizza.Descricao = obj.Descricao;
-                pizza.Quantidade = obj.Quantidade;
                 pizza.Valor = obj.Valor;
                 pizza.Ativo = obj.Ativo;
 

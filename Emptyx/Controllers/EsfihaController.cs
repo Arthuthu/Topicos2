@@ -74,7 +74,6 @@ namespace Emptyx.Controllers
                 esfiha.IdTipo = obj.IdTipo;
                 esfiha.Nome = obj.Nome;
                 esfiha.Descricao = obj.Descricao;
-                esfiha.Quantidade = obj.Quantidade;
                 esfiha.Valor = obj.Valor;
                 esfiha.Ativo = obj.Ativo;
 

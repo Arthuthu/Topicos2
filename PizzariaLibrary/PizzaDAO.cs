@@ -24,7 +24,7 @@ namespace PizzariaLibrary
         //O objeto que é parametro (pizza), receberá informações da Controller e com essas informações sera feito um Insert no banco
         public Pizzas Criar(Pizzas pizza)         
         {
-            banco.Execute("insert into Pizzas values (@IdTipo, @Nome, @Descricao, @Quantidade, @Valor, @Ativo)", pizza);
+            banco.Execute("insert into Pizzas values (@IdTipo, @Nome, @Descricao, @Valor, @Ativo)", pizza);
             return pizza;
         }
 
@@ -39,14 +39,13 @@ namespace PizzariaLibrary
         public void Atualizar(Pizzas pizza)
         {
             banco.Execute($"update Pizzas set IdTipo = @IdTipo, Nome = @Nome," +
-                $" Descricao = @Descricao, Quantidade = @Quantidade, Valor = @Valor, " +
+                $" Descricao = @Descricao, Valor = @Valor, " +
                 $" Ativo = @Ativo where Id = @Id ", new
                 {
                     id = pizza.Id,
                     IdTipo = pizza.IdTipo,
                     Nome = pizza.Nome,
                     Descricao = pizza.Descricao,
-                    Quantidade = pizza.Quantidade,
                     Valor = pizza.Valor,
                     Ativo = pizza.Ativo
                 });
