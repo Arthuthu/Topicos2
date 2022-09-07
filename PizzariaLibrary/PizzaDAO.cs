@@ -38,13 +38,9 @@ namespace PizzariaLibrary
         //Atualiza as informações da Pizza
         public void Atualizar(Pizzas pizza)
         {
-            string sql = @"update Pizzas set IdTipo = @IdTipo, Nome = @Nome,
-                        Descricao = @Descricao, Quantidade = @Quantidade, Valor = @Valor,
-                        Ativo = @Ativo where Id = @Id";
-
-            using (banco)
-            {
-                int rowsAffected = banco.Execute(sql, new
+            banco.Execute($"update Pizzas set IdTipo = @IdTipo, Nome = @Nome," +
+                $" Descricao = @Descricao, Quantidade = @Quantidade, Valor = @Valor, " +
+                $" Ativo = @Ativo where Id = @Id ", new
                 {
                     id = pizza.Id,
                     IdTipo = pizza.IdTipo,
@@ -54,7 +50,6 @@ namespace PizzariaLibrary
                     Valor = pizza.Valor,
                     Ativo = pizza.Ativo
                 });
-            }
         }
     }
 }
