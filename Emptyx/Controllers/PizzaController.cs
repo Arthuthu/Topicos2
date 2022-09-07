@@ -60,7 +60,7 @@ namespace Emptyx.Controllers
             if (ModelState.IsValid)
             {
                 //Chama o método Criar na Classe GetPizzas e passa o objeto preenchido com a data da form da view.
-                var data = new PizzaDAO().Criar(pizza);
+                new PizzaDAO().Criar(pizza);
 
                 return RedirectToAction("Pizzas");
             }

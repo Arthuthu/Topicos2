@@ -155,6 +155,9 @@
     <Content Include="Views\Pizza\Pizzas.cshtml" />
     <Content Include="Views\Pizza\DeletarPizza.cshtml" />
     <Content Include="Views\Pizza\AtualizarPizza.cshtml" />
+    <Content Include="Views\Esfiha\CriarEsfiha.cshtml" />
+    <Content Include="Views\Esfiha\AtualizarEsfiha.cshtml" />
+    <Content Include="Views\Esfiha\DeletarEsfiha.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

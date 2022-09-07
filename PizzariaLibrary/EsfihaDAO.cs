@@ -21,5 +21,33 @@ namespace PizzariaLibrary
             return banco.Query<Esfihas>("select * from Esfihas where id=@id",
                 new { id }).SingleOrDefault();
         }
+
+        public Esfihas Criar(Esfihas esfihas)
+        {
+            banco.Execute("insert into Esfihas values (@IdTipo, @Nome, @Descricao, @Quantidade, @Valor, @Ativo)", esfihas);
+            return esfihas;
+        }
+
+        public bool Deletar(int id)
+        {
+            return banco.Execute("delete from Esfihas where id=@pID",
+            new { pID = id }) == 1;
+        }
+
+        public void Atualizar(Esfihas esfiha)
+        {
+            banco.Execute($"update Esfihas set IdTipo = @IdTipo, Nome = @Nome," +
+                $" Descricao = @Descricao, Quantidade = @Quantidade, Valor = @Valor, " +
+                $" Ativo = @Ativo where Id = @Id ", new
+                {
+                    id = esfiha.Id,
+                    IdTipo = esfiha.IdTipo,
+                    Nome = esfiha.Nome,
+                    Descricao = esfiha.Descricao,
+                    Quantidade = esfiha.Quantidade,
+                    Valor = esfiha.Valor,
+                    Ativo = esfiha.Ativo
+                });
+        }
     }
 }

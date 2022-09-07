@@ -10,6 +10,16 @@
     var esfihas = ViewBag.Esfihas;
 }
 
+<div class="row justify-content-center text-center">
+    <div>
+        <ul class="list-group list-group-horizontal fw-bold border border-dark">
+            <li class="list-group-item col-md-4">@Html.ActionLink("Nome", "Esfihas", new { ordem = 0 })</li>
+            <li class="list-group-item col-md-4">@Html.ActionLink("Tipo", "Esfihas", new { ordem = 1 })</li>
+            <li class="list-group-item col-md-4">@Html.ActionLink("Valor", "Esfihas", new { ordem = 2 })</li>
+        </ul>
+    </div>
+</div>
+
 <br />
 <div class="row justify-content-center text-center">
     <div class="col-md-3 fw-bold">
@@ -47,10 +57,15 @@
         {
             <ul class="list-group list-group-horizontal">
                 <li class="list-group-item col-md-3">@esfiha.Nome</li>
-                <li class="list-group-item col-md-5">@esfiha.Descricao</li>
+                <li class="list-group-item col-md-4">@esfiha.Descricao</li>
                 <li class="list-group-item col-md-2">R$@esfiha.Valor</li>
-                <li class="list-group-item col-md-2"><a href="/Esfiha/EsfihaDetalhes/@esfiha.Id">Detalhes</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/EsfihaDetalhes/@esfiha.Id">Detalhes</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/DeletarEsfiha/@esfiha.Id">Deletar</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/AtualizarEsfiha/@esfiha.Id">Atualizar</a></li>
             </ul>
         }
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/CriarEsfiha">Criar</a></li>
+        </ul>
     </div>
 </div>

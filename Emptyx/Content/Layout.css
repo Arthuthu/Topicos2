@@ -97,3 +97,15 @@ nav {
         text-decoration: none;
         color: #20b0b0;
     }
+
+.listaButton a{
+    text-decoration: none;
+    color: black;
+}
+
+    .listaButton a:hover {
+        text-decoration: none;
+        color: #20b0b0;
+    }
+
+
