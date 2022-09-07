@@ -68,21 +68,34 @@ namespace Emptyx.Controllers
             return View();
         }
 
-        public ActionResult AtualizarPizza()
+        public ActionResult AtualizarPizza(int id)
         {
+            var obj = new PizzaDAO().Buscar(id);
+
+            if (obj != null)
+            {
+                Pizzas pizza = new Pizzas();
+
+                pizza.IdTipo = obj.IdTipo;
+                pizza.Nome = obj.Nome;
+                pizza.Descricao = obj.Descricao;
+                pizza.Quantidade = obj.Quantidade;
+                pizza.Valor = obj.Valor;
+                pizza.Ativo = obj.Ativo;
+
+                return View(pizza);
+            }
+
             return View();
         }
 
         [HttpPost]
         public ActionResult AtualizarPizza(Pizzas pizza)
         {
-            if (ModelState.IsValid)
-            {
-                new PizzaDAO().Atualizar(pizza);
+            new PizzaDAO().Atualizar(pizza);
 
-                return RedirectToAction("Pizzas");
-            }
-            return View();
+            return RedirectToAction("Pizzas");
+
         }
 
         public ActionResult DeletarPizza(int id)
