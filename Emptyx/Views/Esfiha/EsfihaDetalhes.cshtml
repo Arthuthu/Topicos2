@@ -1,16 +1,17 @@
-﻿<link href="~/Content/Esifhas.css" rel="stylesheet" />
-<link href="~/Content/bootstrap.css" rel="stylesheet" />
+﻿<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
 
 @{
     ViewBag.Title = "EsfihaDetalhes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>EsfihaDetalhes</h2>
-
 @{
     var esfiha = ViewBag.Esfiha;
 }
+
+<div class="text-center"><h2>@esfiha.Nome</h2></div>
+<br/>
 
 <div class="row">
     <div>

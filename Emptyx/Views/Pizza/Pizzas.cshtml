@@ -1,4 +1,4 @@
-﻿<link href="~/Content/Pizzas.css" rel="stylesheet" />
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 
 @{
@@ -6,22 +6,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 @{
     var pizzas = ViewBag.Pizzas;
 }
-
-
-
-<div class="row justify-content-center text-center">
-    <div>
-        <ul class="list-group list-group-horizontal fw-bold border border-dark">
-            <li class="list-group-item col-md-4">@Html.ActionLink("Nome", "Pizzas", new { ordem = 0 })</li>
-            <li class="list-group-item col-md-4">@Html.ActionLink("Tipo", "Pizzas", new { ordem = 1 })</li>
-            <li class="list-group-item col-md-4">@Html.ActionLink("Valor", "Pizzas", new { ordem = 2 })</li>
-        </ul>
-    </div>
-</div>
 
 <br />
 <div class="row justify-content-center text-center">
@@ -74,9 +61,19 @@
         </h4>
     </div>
 </div>
+<br />
+<br />
 
-<br />
-<br />
+<div class="row text-center">
+    <div>
+        <ul class="list-group list-group-horizontal fw-bold justify-content-center">
+            <li class="list-group-item col-md-2 border-dark">@Html.ActionLink("Nome", "Pizzas", new { ordem = 0 })</li>
+            <li class="list-group-item col-md-2 border-dark">@Html.ActionLink("Tipo", "Pizzas", new { ordem = 1 })</li>
+            <li class="list-group-item col-md-2 border-dark">@Html.ActionLink("Valor", "Pizzas", new { ordem = 2 })</li>
+        </ul>
+    </div>
+</div>
+<br/>
 
 <div class="row">
     <div>
@@ -99,8 +96,12 @@
                 <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/AtualizarPizza/@p.Id">Atualizar</a></li>
             </ul>
         }
+    <br/>
+    <div>
         <ul class="list-group list-group-horizontal">
             <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/CriarPizza">Criar</a></li>
         </ul>
+    </div>
+
     </div>
 </div>

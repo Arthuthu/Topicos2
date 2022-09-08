@@ -1,0 +1,27 @@
+﻿ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+    ul li a:hover {
+        text-decoration: none;
+        color: #20b0b0;
+    }
+
+.voltarButton {
+
+}
+
+.voltarButton a {
+    display: inline-flex;
+    height: 40px;
+    width: 75px;    
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background: #33C7FF;
+    border-radius: 5px;
+    padding: 0 14px;
+    border: none;
+    align-items: center;
+}

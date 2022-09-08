@@ -1,5 +1,5 @@
 ﻿<link href="~/Content/bootstrap.css" rel="stylesheet" />
-<link href="~/Content/Esifhas.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
 
 @{
     ViewBag.Title = "Esfihas";
@@ -9,16 +9,6 @@
 @{ 
     var esfihas = ViewBag.Esfihas;
 }
-
-<div class="row justify-content-center text-center">
-    <div>
-        <ul class="list-group list-group-horizontal fw-bold border border-dark">
-            <li class="list-group-item col-md-4">@Html.ActionLink("Nome", "Esfihas", new { ordem = 0 })</li>
-            <li class="list-group-item col-md-4">@Html.ActionLink("Tipo", "Esfihas", new { ordem = 1 })</li>
-            <li class="list-group-item col-md-4">@Html.ActionLink("Valor", "Esfihas", new { ordem = 2 })</li>
-        </ul>
-    </div>
-</div>
 
 <br />
 <div class="row justify-content-center text-center">
@@ -41,15 +31,27 @@
         </h4>
     </div>
 </div>
+<br/>
+<br/>
 
+<div class="row text-center">
+    <div>
+        <ul class="list-group list-group-horizontal fw-bold justify-content-center">
+            <li class="list-group-item col-md-2 border-dark">@Html.ActionLink("Nome", "Esfihas", new { ordem = 0 })</li>
+            <li class="list-group-item col-md-2 border-dark">@Html.ActionLink("Tipo", "Esfihas", new { ordem = 1 })</li>
+            <li class="list-group-item col-md-2 border-dark">@Html.ActionLink("Valor", "Esfihas", new { ordem = 2 })</li>
+        </ul>
+    </div>
+</div>
 
 <br />
 <div class="row">
     <div>
         <ul class="list-group list-group-horizontal fw-bold border border-dark">
             <li class="list-group-item col-md-3">Nome</li>
-            <li class="list-group-item col-md-7">Ingredientes</li>
+            <li class="list-group-item col-md-4">Ingredientes</li>
             <li class="list-group-item col-md-2">Valor</li>
+            <li class="list-group-item col-md-3 text-center">Funcionalidades</li>
         </ul>
     </div>
     <div class="col-md-12">
@@ -64,8 +66,12 @@
                 <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/AtualizarEsfiha/@esfiha.Id">Atualizar</a></li>
             </ul>
         }
+    <br/>
+    <div>
         <ul class="list-group list-group-horizontal">
             <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/CriarEsfiha">Criar</a></li>
         </ul>
+    </div>
+
     </div>
 </div>

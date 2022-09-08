@@ -1,4 +1,4 @@
-﻿<link href="~/Content/Pizzas.css" rel="stylesheet" />
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 
 @{
@@ -6,12 +6,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>PizzaDetalhes</h2>
-
 @{
     var pizza = ViewBag.Pizza;
 }
 
+<div class="text-center"><h2>@pizza.Nome</h2></div>
+<br/>
 
 <div class="row">
     <div>
