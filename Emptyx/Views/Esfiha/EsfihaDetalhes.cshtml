@@ -11,7 +11,7 @@
 }
 
 <div class="text-center"><h2>@esfiha.Nome</h2></div>
-<br/>
+<br />
 
 <div class="row">
     <div>
@@ -27,5 +27,14 @@
             <li class="list-group-item col-md-7">@esfiha.Descricao</li>
             <li class="list-group-item col-md-2">R$@esfiha.Valor</li>
         </ul>
+    </div>
+</div>
+
+<br />
+<div class="form-group fw-bold">
+    <div class="list-group list-group-horizontal justify-content-between">
+        <div class="voltarButton">
+            @Html.ActionLink("Voltar", "Esfihas", "Esfiha")
+        </div>
     </div>
 </div>

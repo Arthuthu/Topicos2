@@ -12,7 +12,9 @@ namespace PizzariaLibrary
     {
         public List<Esfihas> Listar()
         {
-            List<Esfihas> esfihas = banco.Query<Esfihas>("select * from Esfihas").ToList();
+            List<Esfihas> esfihas = banco.Query<Esfihas>(@"select e.*, t.Nome
+            as TipoNome from Esfihas e
+            inner join Tipos t on e.IdTipo = t.Id").ToList();
             return esfihas;
         }
 

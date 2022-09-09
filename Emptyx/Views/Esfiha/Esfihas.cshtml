@@ -21,7 +21,7 @@
     <div class="col-md-3 fw-bold">
         <h4>
             <img src="~/Content/imagens/Esfihas/Folhada a doce de leite.png" />
-            Folhada a doce de leite.
+            Folhada a doce de leite
         </h4>
     </div>
     <div class="col-md-3 fw-bold">
@@ -49,7 +49,8 @@
     <div>
         <ul class="list-group list-group-horizontal fw-bold border border-dark">
             <li class="list-group-item col-md-3">Nome</li>
-            <li class="list-group-item col-md-4">Ingredientes</li>
+            <li class="list-group-item col-md-1">Tipo</li>
+            <li class="list-group-item col-md-3">Ingredientes</li>
             <li class="list-group-item col-md-2">Valor</li>
             <li class="list-group-item col-md-3 text-center">Funcionalidades</li>
         </ul>
@@ -59,17 +60,18 @@
         {
             <ul class="list-group list-group-horizontal">
                 <li class="list-group-item col-md-3">@esfiha.Nome</li>
-                <li class="list-group-item col-md-4">@esfiha.Descricao</li>
+                <li class="list-group-item col-md-1">@esfiha.TipoNome</li>
+                <li class="list-group-item col-md-3">@esfiha.Descricao</li>
                 <li class="list-group-item col-md-2">R$@esfiha.Valor</li>
-                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/EsfihaDetalhes/@esfiha.Id">Detalhes</a></li>
-                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/DeletarEsfiha/@esfiha.Id">Deletar</a></li>
-                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/AtualizarEsfiha/@esfiha.Id">Atualizar</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold d-flex align-items-center p-0"><a class="listaButton" href="/Esfiha/EsfihaDetalhes/@esfiha.Id">Detalhes</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold d-flex align-items-center p-0"><a class="listaButtonDeletar" href="/Esfiha/DeletarEsfiha/@esfiha.Id">Deletar</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold d-flex align-items-center p-0"><a class="listaButton" href="/Esfiha/AtualizarEsfiha/@esfiha.Id">Atualizar</a></li>
             </ul>
         }
     <br/>
     <div>
         <ul class="list-group list-group-horizontal">
-            <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Esfiha/CriarEsfiha">Criar</a></li>
+            <li class="list-group-item col-md-1 text-center fw-bold"><a href="/Esfiha/CriarEsfiha">Criar</a></li>
         </ul>
     </div>
 

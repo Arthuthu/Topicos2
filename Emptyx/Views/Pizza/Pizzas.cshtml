@@ -79,7 +79,8 @@
     <div>
         <ul class="list-group list-group-horizontal fw-bold border border-dark">
             <li class="list-group-item col-md-3">Nome</li>
-            <li class="list-group-item col-md-4">Ingredientes</li>
+            <li class="list-group-item col-md-1">Tipo</li>
+            <li class="list-group-item col-md-3">Ingredientes</li>
             <li class="list-group-item col-md-2">Valor</li>
             <li class="list-group-item col-md-3 text-center">Funcionalidades</li>
         </ul>
@@ -88,18 +89,19 @@
         @foreach (var p in pizzas)
         {
             <ul class="list-group list-group-horizontal">
-                <li class="list-group-item col-md-3">@p.Nome</li>
-                <li class="list-group-item col-md-4">@p.Descricao</li>
-                <li class="list-group-item col-md-2">R$@p.Valor</li>
-                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/PizzaDetalhes/@p.Id">Detalhes</a></li>
-                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/DeletarPizza/@p.Id">Deletar</a></li>
-                <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/AtualizarPizza/@p.Id">Atualizar</a></li>
+                <li class="list-group-item col-md-3 d-flex align-items-center">@p.Nome</li>
+                <li class="list-group-item col-md-1 d-flex align-items-center">@p.TipoNome</li>
+                <li class="list-group-item col-md-3 d-flex align-items-center">@p.Descricao</li>
+                <li class="list-group-item col-md-2 d-flex align-items-center">R$@p.Valor</li>
+                <li class="list-group-item col-md-1 text-center fw-bold d-flex align-items-center p-0"><a class="listaButton" href="/Pizza/PizzaDetalhes/@p.Id">Detalhes</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold d-flex align-items-center p-0"><a class="listaButtonDeletar" href="/Pizza/DeletarPizza/@p.Id">Deletar</a></li>
+                <li class="list-group-item col-md-1 text-center fw-bold d-flex align-items-center p-0"><a class="listaButton" href="/Pizza/AtualizarPizza/@p.Id">Atualizar</a></li>
             </ul>
         }
     <br/>
     <div>
         <ul class="list-group list-group-horizontal">
-            <li class="list-group-item col-md-1 text-center fw-bold"><a class="listaButton" href="/Pizza/CriarPizza">Criar</a></li>
+            <li class="list-group-item col-md-1 text-center fw-bold"><a href="/Pizza/CriarPizza">Criar</a></li>
         </ul>
     </div>
 

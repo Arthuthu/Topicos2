@@ -88,24 +88,6 @@ nav {
     transform: translateX(0%);
 }
 
-.listaButton {
-    text-decoration: none;
-    color: black;
-}
 
-    .listaButton:hover {
-        text-decoration: none;
-        color: #20b0b0;
-    }
-
-.listaButton a{
-    text-decoration: none;
-    color: black;
-}
-
-    .listaButton a:hover {
-        text-decoration: none;
-        color: #20b0b0;
-    }
 
 

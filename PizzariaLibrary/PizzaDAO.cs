@@ -10,7 +10,9 @@ namespace PizzariaLibrary
         //Busca todas as Pizzas
         public List<Pizzas> Listar()
         {
-            List<Pizzas> pizzas = banco.Query<Pizzas>("select * from Pizzas order by Nome").ToList();
+            List<Pizzas> pizzas = banco.Query<Pizzas>(@"select p.*, t.Nome 
+            as TipoNome from Pizzas p
+            inner join Tipos t on p.IdTipo = t.Id;").ToList();
             return pizzas;
         }
 
