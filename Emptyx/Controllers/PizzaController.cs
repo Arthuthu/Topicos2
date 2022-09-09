@@ -97,6 +97,13 @@ namespace Emptyx.Controllers
 
         }
 
+        public ActionResult DeletarPizza()
+        {
+            return View();
+        }
+
+        //[HttpDelete] não funciona mas [HttpPost] sim ?
+        [HttpPost]
         public ActionResult DeletarPizza(int id)
         {
             new PizzaDAO().Deletar(id);
