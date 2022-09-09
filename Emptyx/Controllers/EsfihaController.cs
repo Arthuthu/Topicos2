@@ -94,7 +94,29 @@ namespace Emptyx.Controllers
 
         public ActionResult DeletarEsfiha(int id)
         {
-            new EsfihaDAO().Deletar(id);
+            var obj = new EsfihaDAO().Buscar(id);
+
+            if (obj != null)
+            {
+                Esfihas esfiha = new Esfihas();
+
+                esfiha.TipoNome = obj.TipoNome;
+                esfiha.Nome = obj.Nome;
+                esfiha.Descricao = obj.Descricao;
+                esfiha.Valor = obj.Valor;
+                esfiha.Ativo = obj.Ativo;
+
+                return View(esfiha);
+            }
+
+            return RedirectToAction("Esfihas");
+        }
+
+        [HttpPost]
+        public ActionResult DeletarEsfiha(Esfihas esfiha)
+        {
+            new EsfihaDAO().Deletar(esfiha.Id);
+
             return RedirectToAction("Esfihas");
         }
     }

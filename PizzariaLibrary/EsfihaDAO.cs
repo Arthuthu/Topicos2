@@ -20,7 +20,10 @@ namespace PizzariaLibrary
 
         public Esfihas Buscar(int id)
         {
-            return banco.Query<Esfihas>("select * from Esfihas where id=@id",
+            return banco.Query<Esfihas>(@"select e.*, t.Nome
+            as TipoNome from Esfihas e
+            inner join Tipos t on e.IdTipo = t.Id
+            where e.Id=@id",
                 new { id }).SingleOrDefault();
         }
 

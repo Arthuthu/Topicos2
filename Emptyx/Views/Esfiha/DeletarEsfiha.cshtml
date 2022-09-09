@@ -1,31 +1,34 @@
-﻿@model PizzariaLibrary.Models.Esfihas
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@model PizzariaLibrary.Models.Esfihas
 
 @{
     ViewBag.Title = "DeletarEsfiha";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br />
+<div class="text-center">
+    <h3>Tem certeza que deseja deletar esta esfiha?</h3>
+</div>
 
-<h2>DeletarEsfiha</h2>
-
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Esfihas</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.IdTipo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IdTipo)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoNome)
         </dd>
 
         <dt>
@@ -52,22 +55,16 @@
             @Html.DisplayFor(model => model.Ativo)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TipoNome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TipoNome)
-        </dd>
-
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+<div class="list-group list-group-horizontal justify-content-between">
+    <input type="submit" value="Deletar" class="btn btn-danger fw-bold" />
+    <div class="voltarButton">
+        @Html.ActionLink("Voltar", "Esfihas", "Esfiha")
+    </div>
+</div>
     }
 </div>

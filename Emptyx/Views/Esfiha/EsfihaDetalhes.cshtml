@@ -10,21 +10,23 @@
     var esfiha = ViewBag.Esfiha;
 }
 
-<div class="text-center"><h2>@esfiha.Nome</h2></div>
 <br />
+<div class="text-center"><h2>@esfiha.Nome</h2></div>
 
 <div class="row">
     <div>
         <ul class="list-group list-group-horizontal fw-bold border border-dark">
             <li class="list-group-item col-md-3">Nome</li>
-            <li class="list-group-item col-md-7">Ingredientes</li>
+            <li class="list-group-item col-md-2">Tipo</li>
+            <li class="list-group-item col-md-5">Descrição</li>
             <li class="list-group-item col-md-2">Valor</li>
         </ul>
     </div>
     <div class="col-md-12">
         <ul class="list-group list-group-horizontal">
             <li class="list-group-item col-md-3">@esfiha.Nome</li>
-            <li class="list-group-item col-md-7">@esfiha.Descricao</li>
+            <li class="list-group-item col-md-2">@esfiha.TipoNome</li>
+            <li class="list-group-item col-md-5">@esfiha.Descricao</li>
             <li class="list-group-item col-md-2">R$@esfiha.Valor</li>
         </ul>
     </div>

@@ -97,16 +97,32 @@ namespace Emptyx.Controllers
 
         }
 
-        public ActionResult DeletarPizza()
+        public ActionResult DeletarPizza(int id)
         {
-            return View();
+            var obj = new PizzaDAO().Buscar(id);
+
+            if (obj != null)
+            {
+                Pizzas pizza = new Pizzas();
+
+                pizza.TipoNome = obj.TipoNome;
+                pizza.Nome = obj.Nome;
+                pizza.Descricao = obj.Descricao;
+                pizza.Valor = obj.Valor;
+                pizza.Ativo = obj.Ativo;
+
+                return View(pizza);
+            }
+
+            return RedirectToAction("Esfihas");
         }
 
         //[HttpDelete] não funciona mas [HttpPost] sim ?
         [HttpPost]
-        public ActionResult DeletarPizza(int id)
+        public ActionResult DeletarPizza(Pizzas pizza)
         {
-            new PizzaDAO().Deletar(id);
+            new PizzaDAO().Deletar(pizza.Id);
+
             return RedirectToAction("Pizzas");
         }
     }

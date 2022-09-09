@@ -10,21 +10,23 @@
     var pizza = ViewBag.Pizza;
 }
 
+<br />
 <div class="text-center"><h2>@pizza.Nome</h2></div>
-<br/>
 
 <div class="row">
     <div>
         <ul class="list-group list-group-horizontal fw-bold border border-dark">
             <li class="list-group-item col-md-3">Nome</li>
-            <li class="list-group-item col-md-7">Ingredientes</li>
+            <li class="list-group-item col-md-2">Tipo</li>
+            <li class="list-group-item col-md-5">Descrição</li>
             <li class="list-group-item col-md-2">Valor</li>
         </ul>
     </div>
     <div class="col-md-12">
         <ul class="list-group list-group-horizontal">
             <li class="list-group-item col-md-3">@pizza.Nome</li>
-            <li class="list-group-item col-md-7">@pizza.Descricao</li>
+            <li class="list-group-item col-md-2">@pizza.TipoNome</li>
+            <li class="list-group-item col-md-5">@pizza.Descricao</li>
             <li class="list-group-item col-md-2">R$@pizza.Valor</li>
         </ul>
     </div>
